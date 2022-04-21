@@ -2,6 +2,7 @@
 title: Teaching
 layout: default
 active: teaching
+permalink: /teaching/
 ---
 
 # {{ page.title }}

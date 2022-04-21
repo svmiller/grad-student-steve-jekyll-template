@@ -2,6 +2,7 @@
 title: About
 layout: default
 active: about
+permalink: /about/
 ---
 
 # {{ page.title }}

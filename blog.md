@@ -2,6 +2,7 @@
 title: Blog
 layout: default
 active: blog
+permalink: /blog/
 ---
 
 # {{ page.title }}

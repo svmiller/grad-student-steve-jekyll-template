@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+{% include head.html %}
+
+
+  <body>
+<div id="wrap">
+
+<div id="header">
+<h1>{{site.title}}
+<span>{{site.dept}}, {{site.univ}}</span></h1>
+
+</div>
+
+<div id="navcontainer">
+
+<!-- https://stackoverflow.com/questions/8340170/jekyll-automatically-highlight-current-tab-in-menu-bar 
+https://stackoverflow.com/questions/35733044/how-to-add-active-class-to-navigation-link-if-you-are-on-a-single-post-page-i
+-->
+
+
+
+
+<ul class="nav-menu">
+    {% for i in site.data.menu %}
+    {% if i.subcategories != null %}
+    {% if {{page.active}} == {{i.active}} %}
+    <li id="n-active"><a href="{{ i.href }}" class="active">{{ i.title }}</a>
+    {% else %}
+     <li><a href="{{ i.href }}" class="">{{ i.title }}</a>
+    {% endif %}
+    <ul class="sub-menu">
+    {% for subcategory in i.subcategories %}
+    <li><a href="{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+    {% endfor %}
+    </ul> </li>
+    {% else %}
+    {% if {{page.active}} == {{i.active}} %}
+    <li id="n-active"><a href="{{ i.href }}" class="active">{{ i.title }}</a>
+    {% else %}
+    <li><a href="{{ i.href }}" class="">{{ i.title }}</a>
+    {% endif %}   </li>
+    {% endif %}
+ 
+    {% endfor %}
+    </ul>
+
+
+</div>
+
+<div id="content">
+
+
+{{ content }}
+</div>
+
+<div id="sidebar">
+<h1>{{site.title}}</h1>
+<span>{{site.job}}</span><br />
+<p>
+{{ site.address }}<br /> 
+<a href="mailto:{{site.email}}">{{site.email}}</a></p>
+
+</div>
+
+<div id="footer">
+        <p>page designed by steve. <a href="http://jigsaw.w3.org/css-validator/validator?uri={{site.url}}"><abbr title="Cascading Style Sheets">CSS</abbr></a>. <a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.1 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr> 1.1</a>. <a href="http://www.contentquality.com/mynewtester/cynthia.exe?Url1={{site.url}}" title="508 testing, for disability compliance">508</a>.</p>
+</div>
+
+</div> <!-- and that's a #wrap -->
+
+
+
+</body>
+</html>

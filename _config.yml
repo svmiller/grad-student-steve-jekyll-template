@@ -1,0 +1,18 @@
+title: A Graduate Student
+email: a.graduate.student@ekohist.su.se
+dept: Institutionen för ekonomisk historia och internationella relationer
+univ: Stockholms universitet
+job: Ph.D. Student
+address: "Institutionen för ekonomisk historia och internationella relationer<br />106 91 Stockholm"
+
+baseurl: ""
+url: ""
+
+
+navigation:
+  - title: blog
+    url: /blog/
+  - title: about
+    url: /about/
+  - title: projects
+    url: /projects/

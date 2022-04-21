@@ -1,0 +1,28 @@
+- title: "Home"
+  href: "/"
+  active: home
+
+- title: "About"
+  href: "/about/"
+  active: about
+
+- title: "Blog"
+  href: "/blog/"
+  active: blog
+
+- title: "CV"
+  href: "/cv/"
+  active: cv
+
+- title: "Research"
+  href: "/research/"
+  active: research
+
+- title: "Teaching"
+  href: "/teaching/"
+  active: teaching
+  subcategories:
+    - subtitle: "Class 1"
+      subhref: "http://posc1020.svmiller.com"
+    - subtitle: "Class 2"
+      subhref: "http://posc3410.svmiller.com"

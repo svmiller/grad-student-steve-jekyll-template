@@ -23,6 +23,7 @@
   active: teaching
   subcategories:
     - subtitle: "Class 1"
-      subhref: "http://posc1020.svmiller.com"
+      subhref: "/teaching/class-1/"
+      active: class-1
     - subtitle: "Class 2"
       subhref: "http://posc3410.svmiller.com"
